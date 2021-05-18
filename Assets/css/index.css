@@ -81,59 +81,6 @@
 
 /* end slide */
 
-/* product box */
-
-.products-box{
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.77);
-}
-
-.products-box > .title-box {
-	display: flex;
-	flex-direction: row;
-	background-color: #34495e;
-	padding: 5px;
-	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.77);
-
-}
-
-.products-box > .title-box > .text-box{
-	padding-right: 25px;
-	margin-right: 25px;
-	border-right: 1px solid;
-	text-transform: uppercase;
-	font-size: 1.5em;
-}
-
-.products-box > .title-box > .sub-text-box{
-	text-transform: uppercase;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
-	color: #95a5a6;
-}
-
-.products-box > .title-box > .link-detail{
-	color: #e74c3c;
-}
-
-.products-box > .link-detail-btn{
-	padding: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.products-ctn{
-	width: fit-content;
-}
-
-/* end products box */
-
 /* end container */
 
 /* footer */

@@ -3,7 +3,41 @@ $(document).ready(function () {
 	set_qtt()
 	cmt_md_show()		
 	// get_style()
+	suggest_btn_event()
 })
+
+var current_trans_suggest_box = 0;
+function suggest_btn_event() {
+	$('.suggest-box').hover(function () {
+			// over
+			$('.pag-btn').addClass('animate')
+		}, function () {
+			// out
+			$('.pag-btn').removeClass('animate')
+		}
+	);
+
+	$('.pag-btn').click(function (e) { 
+		console.log(e.target.classList[1]);
+		if (e.target.classList[1] == 'arr-next' && current_trans_suggest_box != -4764) {
+			current_trans_suggest_box -= 1191;
+		}else if (e.target.classList[1] == 'arr-pre' && current_trans_suggest_box != 0) {			
+			current_trans_suggest_box += 1191;
+		}
+
+		if (current_trans_suggest_box == 0) 
+			$('.arr-pre').css('display', 'none')
+		else
+		$('.arr-pre').css('display', 'flex')
+
+		if (current_trans_suggest_box == -4764) 
+			$('.arr-next').css('display', 'none')
+		else
+		$('.arr-next').css('display', 'flex')
+
+		$('.box-ctn').css('transform', 'translate('+ current_trans_suggest_box +  'px, 0)')
+	});
+}
 
 var cur_target_md_id = null;
 
